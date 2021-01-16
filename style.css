@@ -103,6 +103,8 @@ h3 {
 
 .section__title {
   margin-bottom:0.1em;
+  margin-top:1em;
+  text-align:center;
 } 
 .section__title--intro {
   font-weight: var(--fw-bold);
@@ -148,7 +150,24 @@ nav {
   color: var(--clr-dark);
   /* background-image:; */  /*to add a background image at some point*/
   /* background-size:cover; */ /*avoids having the image repeat its self. Use with the above code*/
+  text-align:center;
+
 } 
+
+@media (min-width:800px) {
+  .services {
+    display:flex;
+  }
+  .service + .service { /*COMBINATOR WITH ADJACENT SIBLING SELECTOR*/
+    margin-left:2em;
+  }
+}
+
+.service {
+  max-width: 500px; 
+  margin: 0 auto;
+}
+
 /*---END MY SERVICES---*/ 
 
 
