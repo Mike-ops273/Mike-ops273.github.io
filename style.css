@@ -165,8 +165,45 @@ header {
   text-decoration:none;
 } 
 .nav__link:hover {
-  color:var(--clr-accent);
+  color: var(--clr-accent);
+} 
+
+.nav-toggle {
+  padding:0.5em;
+  background:transparent; 
+  border:0;
+  cursor:pointer;
+  position:absolute; 
+  right:1em;
+  top:1em; 
+  z-index:1000;
 }
+
+.hamburger {
+  display:block;
+  position:relative;
+} 
+
+.hamburger,
+.hamburger::before, 
+.hamburger::after {
+  background: var(--clr-dark);
+  width: 2em; 
+  height: 3px; 
+  border-radius:1em;
+  transition: transfrom 250ms ease-in-out;
+}
+
+.hamburger::before, 
+.hamburger::after {
+  content: ""; /*pseudo elements dont work unless they have "content". This may be left as blank.*/
+  position:absolute; /*positions an element to its closes ancestor or its initial containing block*/
+  left:0; 
+  right:0; 
+} 
+
+.hamburger::before {top:6px;}
+.hamburger::after {bottom:6px;}
 
 /*---END HEADER---*/
 
