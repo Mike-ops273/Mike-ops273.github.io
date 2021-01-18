@@ -161,7 +161,7 @@ header {
 .nav__link {
   color: inherit;
   font-weight:var(--fw-bold);
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h2);
   text-decoration:none;
 } 
 .nav__link:hover {
@@ -179,6 +179,20 @@ header {
   z-index:1000;
 }
 
+.nav-open .nav {
+  /*background:red; /*testing if JS is working*/
+  transform: translateX(0);
+}
+.nav-open .nav-toggle {
+  position:fixed; /* nav will change from "position:absolute" to "position:fixed" when nav is open
+  so that it doesnt disappear.*/ 
+}
+.nav-open .hamburger {
+  transform:rotate(180deg); /*applied a cool rotation and rotation time*/
+  transition: all 0.5s;
+}
+
+
 .hamburger {
   display:block;
   position:relative;
@@ -187,7 +201,7 @@ header {
 .hamburger,
 .hamburger::before, 
 .hamburger::after {
-  background: var(--clr-dark);
+  background: var(--clr-accent);
   width: 2em; 
   height: 3px; 
   border-radius:1em;
