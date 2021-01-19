@@ -109,6 +109,7 @@ h3 {
 .section__title--intro {
   font-weight: var(--fw-bold);
   text-align:center;
+  margin-top:0.2em;
 }
 .section__subtitle {
   margin:0;
