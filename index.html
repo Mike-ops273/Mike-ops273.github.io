@@ -1,164 +1,98 @@
 <!DOCTYPE html>
-
-<!--
-    ATTENTION! WHEN YOU SEE THE WORD "ORIGIN" FOR GIT, REPLACE WITH "WEBSITE" FOR 
-    THIS PROJECT. ORIGIIN IS JUST A GENERIC AND MISLEADING NAME IN EXAMPLES THAT 
-    WILL CAUSE ERRORS.
--->
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike-ops landing page</title>
-
-    <!--linking normalize.css below:-->
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <!--my own stylesheet below to override normalize:-->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Mike-ops-273</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
-    <!--
-    gonna try some BEM notation (Block, Element__, Modifier-- to see if it makes the work easier
-    -->
+
     <header>
-        <div class="logo">
-            <!--<img src="https://images.pexels.com/photos/593332/pexels-photo-593332.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                alt="a coffee cup image made by Jessica Lewis on pexels, a stock photo site">-->
-            <!--perhaps i wont use this image yet-->
-        </div>
-
-        <button class="nav-toggle" aria-label="toggle navigation">
+        <button class="nav_toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
-            <!--span is an inline container used to mark up parts of text/documents etc-->
-        </button> <!--better to have a collapsable nav bar-->
-
+        </button>
         <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Introduction</a></li>
-                <li class="nav__item"><a href="#me" class="nav__link">What I do</a></li>
-                <li class="nav__item"><a href="#portfolio-id" class="nav__link">Portfolio</a></li>
+            <ul class="nav_list">
+                <li class="nav_section"><a href="#intro_id" class="nav_link">Intro</a></li>
+                <li class="nav_section"><a href="#specialization_id" class="nav_link">Specialization</a></li>
+                <li class="nav_section"><a href="#portfolio_id" class="nav_link">Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <!--INTRODUCTION & HOME-->
-    <section class="intro" id="home">
-        <!--section is a block level display of sections-->
-        <h1 class="section__title section__title--intro">
-            Wow, a <strong>visitor</strong>! Take a tour of my page :)
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">
-            I am Mike, a front-end developer student & enthusiast
-        </p>
-        <img src="https://images.pexels.com/photos/1982485/pexels-photo-1982485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="an image of a donut made by Dominika Roseclay on pexels, a stock photo site"
-            class="intro__img">
-        <!--change image size-->
-    </section>
-
-
-    <!--ABOUT ME & SERVICES-->
-    <section class="about-me" id="me">
-        <h2 class="section__title section__title--services">What I do</h2>
-        <!--SERVICES-->
-        <div class="services">
-            <div class="service">
-                <h3>HTML</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eum quas reiciendis quibusdam incidunt! Quis rerum eius animi
-                    nisi dolore maxime, perferendis autem nobis vel consectetur in
-                    atque inventore nam temporibus?
-                </p>
+    <section class="intro" id="intro_id">
+        <h1>Wow, a visitor! Take a tour of my page</h1>
+        <p class="intro_p">I'm Mike, a student and enthusiastic developer</p>
+        <div class="donut_container"> <!--if this breaks, look into the "spans"-->
+            <img src="https://images.pexels.com/photos/1982485/pexels-photo-1982485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="an image of a donut made by Dominika Roseclay on pexels, a stock photo site">
+            <div class="donut_text"><span> </span></div>
+            
+            <div class="arrow_container">
+                <div class="arrow bounce">
+                    <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+                </div>
             </div>
-            <!--/ service-->
+            <div class="below"></div>
 
-            <div class="service">
-                <h3>CSS</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Enim itaque vero culpa ea, dolorum commodi corrupti in dolores
-                    quae officiis sint quod maiores obcaecati qui distinctio dolor
-                    vitae eos minima?
-                </p>
-            </div>
-            <!--/ service-->
 
-            <div class="service">
-                <h3>JavaScript</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Fugiat saepe dolore laudantium adipisci vero fuga, voluptate
-                    maxime repudiandae quas pariatur et veniam assumenda nesciunt
-                    qui est aut eveniet architecto mollitia.
-                </p>
-            </div>
-            <!--/ service-->
+
         </div>
-        <!--END SERVICES-->
-
-        <!--an unused button-->
-        <a href="#unused__button" class="btn">An Unused Button</a>
     </section>
 
-    <!--PORTFOLIO-->
-    <section class="my-portfolio" id="portfolio-id">
-        <h2 class="section__title section__title--portfolio">My Portfolio</h2>
-        <p class="section__subtitle section__subtitle--portfolio">Interesting projects I have worked on.</p>
-        <img src="https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="a photo of a monitor displaying code made by Pixabay on pexels, a stock photo site."
-            class="portfolio-background">
+    <section class="specialization" id="specialization_id">
+        <h2>Specialization</h2>
+        <p>Front-end development</p>
+        <div class="row">
+            <div class="column">
+                <img src="htmlicon1c.png" alt="html icon" id="htmlicon_id">
+            </div>
+            <div class="column">
+                <img src="cssicon1c.png" alt="css icon" id="cssicon_id">
+            </div>
+            <div class="column">
+                <img src="jsicon1c.png" alt="js icon" id="jsicon_id">
+            </div>
+        </div>
 
-        <div class="portfolio-body">
-            <!--Portfolio item number 1-->
-            <a href="#" class="portfolio-body__item">
-                <img src="https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt="an image of a phone by Mohi Syed on pexels, a stock photo site" class="portfolio__img">
+    </section>
+
+    <section class="portfolio" id="portfolio_id">
+        <h2>My Portfolio</h2>
+        <p>A selection of interesting projects</p>
+
+        <!--<section class="layout">-->
+        <div class ="portfolio_display">
+            <a href="#" class ="portfolio_link">
+                <img src="https://images.pexels.com/photos/2398356/pexels-photo-2398356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="a photo of a collection of movies by Lucas Pezeta on pexels" class="portfolio__img">
             </a>
-
-            <!--Portfolio item number 2-->
-            <a href="#" class="portfolio-body__item">
+            <a href="#" class ="portfolio_link">
                 <img src="https://images.pexels.com/photos/3861458/pexels-photo-3861458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt="an image of aw oman playing VR by ThisIsEngineering on pexels, a stock photo site"
-                    class="portfolio__img">
+                alt="an image of a woman playing VR by ThisIsEngineering on pexels, a stock photo site"
+                class="portfolio__img">
             </a>
-
-            <!--Portfolio item number 3-->
-            <a href="#" class="portfolio-body__item">
+            <a href="#" class ="portfolio_link">
                 <img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt="an image of a Mac by Christina Morillo on pexels, a stock photo site"
-                    class="portfolio__img">
+                alt="an image of a Mac by Christina Morillo on pexels, a stock photo site"
+                class="portfolio__img">
             </a>
-
         </div>
-
-
+        <!--</section>-->
     </section>
 
-    <!--FOOTER-->
-    <footer class = "footer">
-        <!--add actual email later-->
-        <a href="mailto:address@email.com" class="footer__link">hello@Mike-ops</a>
-        <ul class="contact-info">
-            <li class="contact-info__item"><a class="contact-info__link" href="https://duckduckgo.com">
-                Github</a>
-            </li>
-            <li class="contact-info__item"><a class="contact-info__link" href="https://duckduckgo.com">
-                StackOverflow</a>
-            </li>
-            <li class="contact-info__item"><a class="contact-info__link" href="https://duckduckgo.com">
-                12345</a>
-            </li>
-        </ul>
+    <!--EXPERIMENTAL CARD!-->
+
+    <!--empty for now-->
+
+    <!--END CARD-->
+
+    <footer>
+        <a href="#">Github</a>
     </footer>
 
-    <script src="scipt.js"></script> <!--never add JS into the head-->
-
+    <script src="script.js"></script>
 </body>
-
 </html>
