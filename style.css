@@ -256,3 +256,9 @@
   opacity:0.85;
   transition:all 1s;
 }
+
+footer {
+  padding-top: 10px;
+  width:100%;
+  text-align:center;
+}
