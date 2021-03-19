@@ -254,4 +254,5 @@
 .portfolio__img:hover {
   transform:scale(1.25); 
   opacity:0.85;
+  transition:all 1s;
 }
