@@ -261,4 +261,52 @@ footer {
   padding-top: 10px;
   width:100%;
   text-align:center;
+} 
+
+/*media queries*/ 
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 630px) {
+  .donut_text {
+    font-size: 80px;
+  }
+}
+@media (max-width: 495px) {
+  .donut_text {
+    font-size: 60px;
+  }
+}
+@media (max-width: 495px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 460px) {
+  .intro {
+    padding-top: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .intro_p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 375px) {
+  .donut_text {
+    font-size: 40px;
+  }
+}
+@media (max-width: 290px) {
+  .intro_p {
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 36px;
+  }
 }
