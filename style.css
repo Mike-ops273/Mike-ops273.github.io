@@ -38,6 +38,7 @@
     font-size: var(--fs-body);
     line-height:1.6;
     transform-style:preserve-3d;
+    overflow-x:hidden; /*scrolling to the right no longer shows the nav overlay*/
   } 
 
   h1, h2, h3 {
@@ -68,7 +69,8 @@
     left: 0;
     right:0;
     z-index: 100; /*moves the item in the z-axis*/
-  
+    overflow: hidden;
+   
     /*2 different states are required*/ 
     transform:translateX(100%); /*will move the nav menu X% off the screen*/
     transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
@@ -76,12 +78,13 @@
   .nav_list {
     list-style:none;
     display:flex;
-    height:30%;
+    height:70%;
     flex-direction:column; 
     justify-content: space-evenly;
     align-items:center; 
     margin:0; 
     padding:0;
+    padding-top:80px;
   }
   .nav_link {
     color: inherit;
